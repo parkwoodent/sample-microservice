@@ -29,11 +29,11 @@ spec:
               containerPort: 8080
               protocol: TCP
           securityContext:
-            allowPrivilegeEscalation: false
-            capabilities: {}
-            privileged: false
-            readOnlyRootFilesystem: false
-            runAsNonRoot: false
+            - allowPrivilegeEscalation: false
+              capabilities: {}
+              privileged: false
+              readOnlyRootFilesystem: false
+              runAsNonRoot: false
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
       nodeSelector:
