@@ -34,10 +34,10 @@ spec:
             privileged: false
             readOnlyRootFilesystem: false
             runAsNonRoot: false
-          stdin: true
+          stdin: true                  
+          tty: {{ .Values.image.tty }}
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
-          tty: true
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
       nodeSelector:

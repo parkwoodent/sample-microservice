@@ -5,9 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: stable
+  repository: parkwoodenv
+  tag: sample-microservice
   pullPolicy: IfNotPresent
+  tty: true
 
 nameOverride: ""
 fullnameOverride: ""
