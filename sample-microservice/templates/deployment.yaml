@@ -36,8 +36,6 @@ spec:
             runAsNonRoot: false
           stdin: true                  
           tty: {{ .Values.image.tty }}
-          terminationMessagePath: /dev/termination-log
-          terminationMessagePolicy: File
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
       nodeSelector:
