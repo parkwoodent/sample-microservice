@@ -6,6 +6,7 @@ metadata:
   generation: 1
   name: {{ $fullName }}
   namespace: {{ .Release.Namespace}}
+  labels:
 {{ include "sample-microservice.labels" . | indent 4 }}
   {{- with .Values.ingress.annotations }}
   annotations:

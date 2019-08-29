@@ -11,5 +11,5 @@ service:
   
 ingress:
   hosts:
-    - host: dev-microservice.parkwood-digital.com
+    - host: dev-sample-microservice.parkwood-digital.com
       paths: ['/']
