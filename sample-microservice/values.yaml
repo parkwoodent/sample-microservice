@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: stable
+  repository: parkwoodent/sample-microservice
+  tag: 1b34a6f
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
