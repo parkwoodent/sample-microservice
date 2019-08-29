@@ -30,11 +30,11 @@ spec:
               protocol: TCP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-        env:
-        - name: STRICTLY_CROSSOVER
-          value: "True"
-        - name: WITH_ADMIN
-          value: "True"
+          env:
+          - name: STRICTLY_CROSSOVER
+            value: "True"
+          - name: WITH_ADMIN
+            value: "True"
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
