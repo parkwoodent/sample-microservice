@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: parkwoodent/sample-microservice
-  tag: a28c99f
+  tag: ${trigger['tag']}
   pullPolicy: Always
 
 service:
