@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: parkwoodent/sample-microservice
-  tag: 1b34a6f
+  tag: 5a11cb7
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
