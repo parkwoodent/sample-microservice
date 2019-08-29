@@ -3,9 +3,8 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  generation: 1
   name: {{ $fullName }}
-  namespace: {{ .Release.Namespace}}
+  namespace: {{ .Release.Namespace }}
   labels:
 {{ include "sample-microservice.labels" . | indent 4 }}
   {{- with .Values.ingress.annotations }}
@@ -25,14 +24,14 @@ spec:
 {{- end }}
   rules:
   {{- range .Values.ingress.hosts }}
-  - host: {{ .host | quote }}
-    http:
-      paths:
-      {{- range .paths }}
-        path: {{ . }}
-        - backend:
-            serviceName: {{ $fullName }}
-            servicePort: 8080
-      {{- end }}
+    - host: {{ .host | quote }}
+      http:
+        paths:
+        {{- range .paths }}
+          - path: {{ . }}
+            backend:
+              serviceName: {{ $fullName }}
+              servicePort: 8080
+        {{- end }}
   {{- end }}
 {{- end }}

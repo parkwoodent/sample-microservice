@@ -2,7 +2,7 @@ apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
   name: {{ include "sample-microservice.fullname" . }}
-  namespace: {{ .Release.Namespace}}
+  namespace: {{ .Release.Namespace }}
   labels:
     app.kubernetes.io/name: {{ include "sample-microservice.name" . }}
     helm.sh/chart: {{ include "sample-microservice.chart" . }}
