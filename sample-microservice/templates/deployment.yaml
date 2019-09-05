@@ -32,7 +32,7 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           envFrom:
           - secretRef:
-            name: some-secret-thing
+              name: some-secret-thing
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
