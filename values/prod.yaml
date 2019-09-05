@@ -13,3 +13,7 @@ ingress:
   hosts:
     - host: sample-microservice.parkwood-digital.com
       paths: ['/']
+  
+  tls:
+  - hosts:
+    - sample-microservice.parkwood-digital.com
