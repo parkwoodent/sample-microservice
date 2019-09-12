@@ -9,7 +9,7 @@ import (
 
 // HandlerFunc1 handles basic calls
 func HandlerFunc1(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "\nRelease 1.012 - %s", os.Getenv("STRICTLY_CROSSOVER"))
+	fmt.Fprintf(w, "\nRelease 1.013 - %s", os.Getenv("STRICTLY_CROSSOVER"))
 }
 
 func main() {
